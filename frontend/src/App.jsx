@@ -1,14 +1,18 @@
 import FacialExpression from "./components/FacialExpression"
 import './App.css'
-import Moodsong from './components/Moodsong';
+import MoodSong from './components/MoodSongs';
+import { useState } from 'react'
 
 function App() {
 
+  const [Songs, setSongs] = useState([
+       
+   ]);
 
   return (
     <>
-      <FacialExpression />
-      <Moodsong />
+      <FacialExpression setSongs={setSongs} />
+      <MoodSong songs={Songs} />
     </>
   )
 }
